@@ -62,6 +62,7 @@ of a branch onto a different position".
 the only one who uses it.
 
 ## squash
+Squash n commits into single one.
 
 # project description
 We have the same problem on three base branches:
@@ -77,7 +78,7 @@ We have the same problem on three base branches:
 |action   |base branch   |feature branch   |
 |---|---|---|
 |merge   |for-merge   |for-merge-feature   |
-|merge + squash   |with-squash   |with-squash-feature   |
+|merge + squash   |for-merge-squash   |for-merge-squash-feature   |
 |rebase   |for-rebase   |for-rebase-feature   |
 
 Displaying commits we see the history:
