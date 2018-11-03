@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mtumilowicz/git-merge-vs-rebase.svg?branch=master)](https://travis-ci.com/mtumilowicz/git-merge-vs-rebase)
+
 # git-merge-vs-rebase
 _Reference_: https://www.atlassian.com/git/tutorials/merging-vs-rebasing  
 _Reference_: https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333  
