@@ -65,7 +65,7 @@ the only one who uses it.
 Squash n commits into single one.
 
 # project description
-We have the same problem on three base branches:
+What we want to do:
 1. modify README.md
 1. base branch: a b
 1. feature branch: 
