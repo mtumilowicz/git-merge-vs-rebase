@@ -81,40 +81,38 @@ We have the same problem on three base branches:
 |merge + squash   |for-merge-squash   |for-merge-squash-feature   |
 |rebase   |for-rebase   |for-rebase-feature   |
 
-Displaying commits we see the history:
+## history
 
-* merge
-    * base branch
+* **merge**
+    * base branch (`for-merge`)
         * Merge pull request ...
         * Create new_file2.txt
         * **a** **b**
         * Create new_file1.txt
         * a **b**
         * a b
-    * feature branch
+    * feature branch (`for-merge-feature`)
         * **a** **b**
         * a **b**
         * a b
-    
-* rebase
-    * base branch
+* **rebase**
+    * base branch (`for-rebase`)
         * **a** **b**
         * a **b**
         * Create new_file2.txt
         * Create new_file1.txt
         * a b
-    * feature branch
+    * feature branch (`for-rebase-feature`)
         * **a** **b**
         * a **b**
         * a b
-        
-* merge + squash
-    * base branch
+* **merge + squash**
+    * base branch (`for-merge-squash`)
         * For merge squash feature (#17) ...
         * Create new_file2.txt
         * Create new_file1.txt
         * a b        
-    * feature branch
+    * feature branch (`for-merge-squash-feature`)
         * **a** **b**
         * a **b**
         * a b        
