@@ -1,6 +1,7 @@
 # git-merge-vs-rebase
 _Reference_: https://www.atlassian.com/git/tutorials/merging-vs-rebasing  
 _Reference_: https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333  
+_Reference_: https://www.atlassian.com/git/tutorials/merging-vs-rebasing  
 _Reference_: https://git-scm.com/docs/git-rebase  
 _Reference_: https://git-scm.com/docs/git-merge
 
@@ -58,7 +59,7 @@ of a branch onto a different position".
   (the commits’ identifiers).
 * https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing
 * **The one-line summary**: don’t rebase a branch unless you are 
-the only one who uses it. Or you enjoy chaos.
+the only one who uses it.
 
 ## squash
 
@@ -82,19 +83,40 @@ We have the same problem on three base branches:
 Displaying commits we see the history:
 
 * merge
-    * Merge pull request #5 from mtumilowicz/for-merge-feature  …
-    * **a** **b**
-    * a **b**
-    * a b
+    * base branch
+        * Merge pull request ...
+        * Create new_file2.txt
+        * **a** **b**
+        * Create new_file1.txt
+        * a **b**
+        * a b
+    * feature branch
+        * **a** **b**
+        * a **b**
+        * a b
     
 * rebase
-    * **a** **b**
-    * a **b**
-    * a b
-
+    * base branch
+        * **a** **b**
+        * a **b**
+        * Create new_file2.txt
+        * Create new_file1.txt
+        * a b
+    * feature branch
+        * **a** **b**
+        * a **b**
+        * a b
+        
 * merge + squash
-    * With squash feature (#7)  …
-    * a b
+    * base branch
+        * For merge squash feature (#17) ...
+        * Create new_file2.txt
+        * Create new_file1.txt
+        * a b        
+    * feature branch
+        * **a** **b**
+        * a **b**
+        * a b        
 
 # summary
 * Use merge in cases where you want a set of commits to be clearly 
