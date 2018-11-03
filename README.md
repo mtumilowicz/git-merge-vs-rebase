@@ -5,6 +5,8 @@ _Reference_: https://git-scm.com/docs/git-rebase
 _Reference_: https://git-scm.com/docs/git-merge
 
 # preface
+The main goal of this project is to show difference between merge
+and rebase and to describe squash.
 
 ## merge
 **git-merge** - Join two or more development histories together.
@@ -61,6 +63,36 @@ the only one who uses it. Or you enjoy chaos.
 ## squash
 
 # project description
+We have the same problem on three base branches:
+1. modify README.md
+1. base branch: a b
+1. feature branch: 
+    1. first commit: a **b**
+    1. second commit: **a** **b**
+1. we want to move changes from feature branch to base branch
+
+|action   |base branch   |feature branch   |
+|---|---|---|
+|merge   |for-merge   |for-merge-feature   |
+|merge + squash   |with-squash   |with-squash-feature   |
+|rebase   |for-rebase   |for-rebase-feature   |
+
+Displaying commits we see the history:
+
+* merge
+    * Merge pull request #5 from mtumilowicz/for-merge-feature  …
+    * **a** **b**
+    * a **b**
+    * a b
+    
+* rebase
+    * **a** **b**
+    * a **b**
+    * a b
+
+* merge + squash
+    * With squash feature (#7)  …
+    * a b
 
 # summary
 * Use merge in cases where you want a set of commits to be clearly 
