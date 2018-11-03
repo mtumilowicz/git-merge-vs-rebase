@@ -67,8 +67,10 @@ We have the same problem on three base branches:
 1. modify README.md
 1. base branch: a b
 1. feature branch: 
-    1. first commit: a **b**
+    1. first commit: a **b** 
+    1. we add to base branch `new_file1.txt`
     1. second commit: **a** **b**
+1. we add to base branch `new_file2.txt`
 1. we want to move changes from feature branch to base branch
 
 |action   |base branch   |feature branch   |
